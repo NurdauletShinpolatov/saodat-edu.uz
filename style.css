@@ -1,0 +1,411 @@
+:root{
+	--logo-blue: #0c4692;
+	--blue1: #150c92;
+	--blue2: #0c8992;
+	--light-blue: #bad8ff;
+
+	--icons-blue: #44ccfd; /*68, 204, 253*/
+	--navbar-blue: #28455d; /*40, 69, 93*/
+}
+
+/*----- Intro ----- */
+	.header{
+		min-height: 100vh;
+		width: 100%;
+		/*padding-top: 200px;*//*26, 54, 79*/
+		background-image: linear-gradient(rgba(26, 54, 79, 0.5), rgba(26, 54, 79, 0.5)), url("images/main3.png");
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+	}
+
+	.text-box h1{
+		font-size: 62px;
+	}
+
+	.text-box p{
+		color: black;
+		margin: 10px 0px 40px;
+		font-size: 14px;
+	}
+
+	.hero-btn{
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+		margin-top: 20px;
+		border: 2px solid #fff;
+		padding: 12px 34px;
+		font-size: 16px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.hero-btn:hover{
+		border: 2px solid var(--icons-blue);
+		background-color: var(--icons-blue);
+		transition: 0.3s;
+	}
+	.text-box{
+		width: 40%;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		transform: translate(-40%, -40%);
+		text-align: center;
+	}
+
+/*----- Kurslar -----*/
+	.kurslar{
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		padding-top: 50px;
+	}
+
+	.kurslar h1{
+		font-size: 36px;
+	}
+
+	.kurslar p{
+		font-size: 24px;
+	}
+
+	.kurslar-col{
+		flex-basis: 24%;
+		height: 300px;
+		border-radius: 10px;
+		margin-bottom: 30px;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+
+	}
+
+	.kurslar-col img{
+		display: block;
+		height: 100%;
+		max-height: 300px;
+		position: center;
+	}
+
+	.layer{
+		background: transparent;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: 0.5s;
+	}
+
+	.layer:hover{
+		background: rgba(12, 70, 146, 0.7);
+	}
+
+	.layer h3{
+		width: 100%;
+		font-weight: 500;
+		color: #fff;
+		font-size: 26px;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		position: absolute;
+		opacity: 0;
+		transition: 0.5s;
+	}
+
+	.layer:hover h3{
+		bottom: 50%;
+		opacity: 1;
+	}
+
+	@media(max-width: 1050px){
+		.kurslar-col{
+			flex-basis: 45%;
+			min-width: 200px;
+		}
+
+		.layer h3{
+			bottom: 50%;
+			opacity: 1;
+			transition: 0s;
+		}
+
+		.layer{
+			background: rgba(12, 70, 146, 0.7);
+		}
+
+		.kurslar h1{
+			font-size: 30px;
+		}
+
+		.kurslar p{
+			font-size: 20px;
+		}
+	}
+
+	#english{
+		background-image: url("images/xorijiy_tillar.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+	#matem{
+		background-image: url("images/matem.jpg");
+		background-size: cover;
+		background-position: center;		
+	}
+
+	#abituriyent{
+		background-image: url("images/abituriyent.jpg");
+		background-size: cover;
+		background-position: center;
+		}
+
+	#it{
+		background-image: url("images/it.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+/*----- Nima uchun Saodat Education -----*/
+	.colored-section{
+		width: 100%;
+		background-color: rgb(230, 230, 230);
+		box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+	}
+
+	.course{
+		width: 80%;
+		margin: auto;
+		padding-top: 100px;
+	}
+
+	.course h1{
+		font-size: 36px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.course ol{
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 22px;
+		padding: 10px;
+		margin-left: 20px;
+	}
+
+	.content-row{
+		margin-top: 5%;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.ad-col{
+		flex-basis: 48%;
+		/*background: #fff3f3;*/
+		/*background: #b3d3fc;*/
+		background: var(--light-blue);
+		box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+		border-radius: 10px;
+		margin-bottom: 5%;
+		padding: 20px 12px;
+		box-sizing: border-box;
+		transition: 0.3s;
+	}
+
+	.course h3{
+		text-align: center;
+		font-weight: 600;
+		margin: 10px 0;
+	}
+
+	.ad-col:hover{
+		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	@media(max-width: 1050px){
+		.course h1{
+			font-size: 30px;
+		}
+	}
+
+	@media(max-width: 850px){
+		#advantages{
+			flex-flow: column;
+		}
+	}
+
+/*----- Fotolar -----*/
+
+	.fotolar{
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		padding-top: 100px;
+	}
+
+	.foto{
+		flex-basis: 31%;
+		min-width: 200px;
+		border-radius: 10px;
+		margin-bottom: 5%;
+		text-align: left;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.foto-container{
+		width: 100%;
+		max-height: 223px;
+		margin-bottom: 10px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.foto-hover{
+		width: 100%;
+		border-radius: 10px;
+		filter: grayscale(100);
+		transition: 0.3s all ease-in-out;
+	}
+
+	.foto-hover:hover{
+		transform: scale(1.05);
+		filter: grayscale(0);
+	}
+
+	.next{
+		position: absolute;
+		top: 50%;
+		right: 3%;
+		width: 10%;
+		height: 15%;
+		transform: translate(50%, -50%);
+	}
+
+	.prev{
+		position: absolute;
+		top: 50%;
+		left: 3%;
+		width: 10%;
+		height: 15% ;
+		transform: translate(-50%, -50%);
+	}
+
+	.foto p{
+		padding: 0;
+		text-align: justify;
+	}
+
+	.foto h3{
+		margin-top: 16px;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	@media(max-width: 850px){
+		.foto-hover{
+			filter: grayscale(0);
+		}
+
+	}
+
+/*----- Biz haqimizda holis fikirlar -----*/
+	.comments{
+		width: 90%;
+		margin: auto;
+		padding: 50px 30px;
+		text-align: center;
+	}
+
+	.users{
+		display: grid;
+		/*gap: var(--size-3);*/
+		gap: 10px;
+		grid-auto-flow: column;
+		grid-auto-columns: 40%;
+		overflow-x: auto;
+	}
+
+	.user{
+		flex: 1;
+		border-radius: 10px;
+		margin: 5% 10px;
+		text-align: left;
+		background: var(--light-blue);
+		padding: 25px;
+		cursor: pointer;
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+		min-width: 300px;
+	}
+
+	#anvarjon{
+		flex: 2;
+	}
+
+	.user img{
+		height: 40px;
+		margin-left: 5px;
+		margin-right: 30px;
+		border-radius: 50%;
+	}
+
+	.user p{
+		padding: 0px;
+	}
+
+	.user h3{
+		margin-top: 15px;
+		/*text-align: left;*/
+	}
+
+	.snaps-inline{
+		scroll-snap-type: inline mandatory;
+		scroll-padding-inline: 10px;
+	}
+
+	.snaps-inline > *{
+		scroll-snap-align:  start;
+	}
+	@media(max-width: 1100px){
+		.users{
+			grid-auto-columns: auto;
+		}
+	}
+
+/*----- Call to action -----*/
+	.cta{
+		margin: 100px auto;
+		width: 80%;
+		background-image: linear-gradient(rgba(26, 54, 79, 0.5), rgba(26, 54, 79, 0.5)), url(images/register.jpg);
+		background-position: center;
+		background-size: cover;
+		border-radius: 10px;
+		text-align: center;
+		padding: 100px 0;
+	}
+
+	.cta a{
+		font-size: 30px;
+		padding: 10px 30px;
+		border-radius: 5px;
+	}
+
+	@media(max-width: 750px){
+		.cta a{
+			font-size: 12px;
+
+		}
+	}
+
+	@media(max-width: 520px){
+		.text-box h1{
+			font-size: 20px;
+		}
+	}

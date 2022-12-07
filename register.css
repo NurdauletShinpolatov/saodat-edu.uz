@@ -1,0 +1,172 @@
+:root{
+	--logo-blue: #0c4692;
+	--blue1: #150c92;
+	--blue2: #0c8992;
+	--light-blue: #bad8ff;
+
+	--icons-blue: #44ccfd; /*68, 204, 253*/
+	--navbar-blue: #28455d; /*40, 69, 93*/
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo img{
+	width: 80px;
+	padding-left: 10%;
+	color: var(--navbar-blue);
+}
+
+.logo{
+	display: flex;
+	padding-left: 10%;
+	padding-top: 5vh;
+}
+
+.brand-name h1{
+	margin-left: 20px;
+	margin-top: 10px;
+	color: var(--logo-blue);
+	font-size: 28px;
+}
+
+.brand-name p{
+	margin-left: 20px;
+	color: var(--logo-blue);
+	font-size: 20px;
+}
+
+/* ---- form ---- */
+	
+	.clr{
+		clear: both;
+		margin-top: 100px;
+	}
+
+	.hero{
+		width: 100%;
+		height: 110vh;
+		background-color: white;
+		/*background: rgb(12,70,146);*/
+		/*background: linear-gradient(180deg, rgba(12,70,146,1) 0%, rgba(240,244,248,1) 100%, rgba(255,255,255,1) 100%);*/
+	}
+
+	.input-group{
+		margin: 30px 0;
+		position: relative;
+		color: var(--logo-blue);
+	}
+
+	.hero input{
+		min-width: 200px;
+		padding: 10px;
+		outline: 0;
+		border: 2px solid var(--navbar-blue);
+		border-radius: 10px;
+		color: black;
+		background: transparent;
+		font-size: 15px;
+		width: 100%;
+		box-sizing: border-box;
+
+	}
+
+	.row{
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-around;
+		padding-top: 20vh;
+	}
+
+	.row img{
+		width: 47%;
+	}
+	
+	.form{
+		width: 30%;
+		text-align: center;
+		align-items: center;
+		justify-content: space-around;
+		margin: 40px 0px;
+	}
+
+	.form label{
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 10px;
+		color: var(--icons-blue);
+		cursor: text;
+		transition: 0.2s;
+	}
+
+	.form button{
+		width: 100%;
+		padding: 10px 0;
+		color: var(--navbar-blue);
+		outline: none;
+		background: transparent;
+		border: 2px solid var(--navbar-blue);
+		border-radius: 20px;
+		width: 40%;
+		cursor: pointer;
+		transition: 0.3s;
+		min-width: 150px;
+	}
+
+	.form button:hover{
+		background-color: var(--navbar-blue);
+		color: white;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	textarea{
+		width: 100%;
+		box-sizing: border-box;
+		text-decoration: none;
+		margin-top: 10px;
+		padding: 5%;
+		margin: auto;
+		outline: 0;
+		font-size: 14px;
+		border: 2px solid var(--navbar-blue);
+		border-radius: 10px;
+		min-width: 200px;
+	}
+
+	input:focus~label,
+	input:valid~label,
+	textarea:focus~label,
+	textarea:valid~label{
+		top: -35px;
+		font-size: 14px;
+	}
+
+	/* after */
+		.form h1{
+			color: green;
+		}
+
+		.form p{
+			color: darkgray;
+		}
+
+	@media(max-width: 900px){
+		.row{
+			flex-direction: column;
+		}
+
+		.row form{
+			
+			width: 80%;
+			margin: 40px auto;
+			width: 80%;
+
+		}
+	}
