@@ -38,81 +38,79 @@ function submitform(){
 		  console.log("Request complete! response:", res);
 	});
 }
+
+let dtm = [
+	"images/dtm1.jpg",
+	"images/dtm2.jpg",
+	"images/dtm3.jpg",
+	"images/dtm4.jpg"
+];
+let dars = [
+	"images/dars1.jpg", 
+	"images/dars2.jpg", 
+	"images/dars3.jpg", 
+	"images/dars4.jpg"
+];
+let darsdan_tashqari = [
+	"images/darsdan_tashqari1.jpg", 
+	"images/darsdan_tashqari2.jpg", 
+	"images/darsdan_tashqari3.jpg", 
+	"images/darsdan_tashqari4.jpg"
+];
+
+let index_dtm = 0;
+let index_dars = 0;
+let index_darsdan_tashqari = 0;
+
 // Fotolar
 function prev1() {
-	let link1 = "images/dtm1.jpg";
-	let link2 = "images/dtm2.jpg";
-	let link3 = "images/dtm3.jpg";
-	let link4 = "images/images/dtm4.jpg";
-
-	let source = document.getElementsByClassName("foto-hover")[0].src;
-	if(source===link1) document.getElementsByClassName("foto-hover")[0].src = link4;
-	else if(source===link2) document.getElementsByClassName("foto-hover")[0].src = link1;
-	else if(source===link3) document.getElementsByClassName("foto-hover")[0].src = link2;
-	else if(source===link4) document.getElementsByClassName("foto-hover")[0].src = link3;	
+	if (index_dtm > 0) {
+		index_dtm -= 1;
+	} else {
+		index_dtm = 3;
+	}
+	document.getElementsByClassName("foto-hover")[0].src = dtm[index_dtm];
 }
 function next1() {
-	let link1 = "/images/dtm1.jpg";
-	let link2 = "/images/dtm2.jpg";
-	let link3 = "/images/dtm3.jpg";
-	let link4 = "/images/dtm4.jpg";
-
-	let source = document.getElementsByClassName("foto-hover")[0].src;
-	if(source===link1) document.getElementsByClassName("foto-hover")[0].src = link2;
-	else if(source===link2) document.getElementsByClassName("foto-hover")[0].src = link3;
-	else if(source===link3) document.getElementsByClassName("foto-hover")[0].src = link4;
-	else if(source===link4) document.getElementsByClassName("foto-hover")[0].src = link1;	
+	if (index_dtm < 3) {
+		index_dtm += 1;
+	} else {
+		index_dtm = 0;
+	}
+	document.getElementsByClassName("foto-hover")[0].src = dtm[index_dtm];
 }
-
-
+//
 function prev2() {
-	let link1 = "/images/dars1.jpg";
-	let link2 = "/images/dars2.jpg";
-	let link3 = "/images/dars3.jpg";
-	let link4 = "/images/dars4.jpg";
-
-	let source = document.getElementsByClassName("foto-hover")[1].src;
-	if(source===link1) document.getElementsByClassName("foto-hover")[1].src = link4;
-	else if(source===link2) document.getElementsByClassName("foto-hover")[1].src = link1;
-	else if(source===link3) document.getElementsByClassName("foto-hover")[1].src = link2;
-	else if(source===link4) document.getElementsByClassName("foto-hover")[1].src = link3;	
+	if (index_dars > 0) {
+		index_dars -= 1;
+	} else if (index_dars === 0) {
+		index_dars = 3;
+	}
+	document.getElementsByClassName("foto-hover")[1].src = dars[index_dars];
 }
 function next2() {
-	let link1 = "/images/dars1.jpg";
-	let link2 = "/images/dars2.jpg";
-	let link3 = "/images/dars3.jpg";
-	let link4 = "/images/dars4.jpg";
-
-	let source = document.getElementsByClassName("foto-hover")[1].src;
-	if(source===link1) document.getElementsByClassName("foto-hover")[1].src = link2;
-	else if(source===link2) document.getElementsByClassName("foto-hover")[1].src = link3;
-	else if(source===link3) document.getElementsByClassName("foto-hover")[1].src = link4;
-	else if(source===link4) document.getElementsByClassName("foto-hover")[1].src = link1;	
+	if (index_dars < 3) {
+		index_dars += 1;
+	} else {
+		index_dars = 0;
+	}
+	document.getElementsByClassName("foto-hover")[1].src = dars[index_dars];
 }
-
-
+//
 function prev3() {
-	let link1 = "/images/darsdan_tashqari1.jpg";
-	let link2 = "/images/darsdan_tashqari2.jpg";
-	let link3 = "/images/darsdan_tashqari3.jpg";
-	let link4 = "/images/darsdan_tashqari4.jpg";
-
-	let source = document.getElementsByClassName("foto-hover")[2].src;
-	if(source===link1) document.getElementsByClassName("foto-hover")[2].src = link4;
-	else if(source===link2) document.getElementsByClassName("foto-hover")[2].src = link1;
-	else if(source===link3) document.getElementsByClassName("foto-hover")[2].src = link2;
-	else if(source===link4) document.getElementsByClassName("foto-hover")[2].src = link3;	
+	if (index_darsdan_tashqari > 0) {
+		index_darsdan_tashqari -= 1;
+	} else if (index_darsdan_tashqari === 0) {
+		index_darsdan_tashqari = 3;
+	}
+	document.getElementsByClassName("foto-hover")[2].src = darsdan_tashqari[index_darsdan_tashqari];
 }
 function next3() {
-	let link1 = "/images/darsdan_tashqari1.jpg";
-	let link2 = "/images/darsdan_tashqari2.jpg";
-	let link3 = "/images/darsdan_tashqari3.jpg";
-	let link4 = "/images/darsdan_tashqari4.jpg";
-
-	let source = document.getElementsByClassName("foto-hover")[2].src;
-	if(source===link1) document.getElementsByClassName("foto-hover")[2].src = link2;
-	else if(source===link2) document.getElementsByClassName("foto-hover")[2].src = link3;
-	else if(source===link3) document.getElementsByClassName("foto-hover")[2].src = link4;
-	else if(source===link4) document.getElementsByClassName("foto-hover")[2].src = link1;	
+	if (index_darsdan_tashqari < 3) {
+		index_darsdan_tashqari += 1;
+	} else {
+		index_darsdan_tashqari = 0;
+	}
+	document.getElementsByClassName("foto-hover")[2].src = darsdan_tashqari[index_darsdan_tashqari];	
 }
 
