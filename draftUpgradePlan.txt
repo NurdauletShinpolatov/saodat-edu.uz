@@ -1,0 +1,15 @@
+Asosiy
+    Responsibility
+    Colours of texts
+    Layouts
+    Contact icons. Do it in a more creative way
+    Picture gallery. Do it more professional
+    Horizontal scroll of testinomials. ( probably we will use Swiper js)
+Kurslar
+    The text should show up after image finished the animation
+Sinov darsiga yozilish
+    change
+        icon
+        layout
+        form style
+        
